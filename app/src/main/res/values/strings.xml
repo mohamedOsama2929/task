@@ -11,4 +11,6 @@
     <string name="age">age</string>
     <string name="job_title">job title</string>
     <string name="gender">gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 </resources>
