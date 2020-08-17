@@ -11,7 +11,4 @@ interface NoteDao {
 
     @get:Query("SELECT * FROM `note table`")
     val allNotes: List<Note?>?
-
-    @Query("DELETE FROM `note table`")
-    fun delete()
 }

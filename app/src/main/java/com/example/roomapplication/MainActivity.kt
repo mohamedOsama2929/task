@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clearInputs() {
-        Objects.requireNonNull(nameEditTxt!!.text).clear()
-        Objects.requireNonNull(ageEditTxt!!.text).clear()
-        Objects.requireNonNull(jobTitleEditTxt!!.text).clear()
+        Objects.requireNonNull(nameEditTxt.text).clear()
+        Objects.requireNonNull(ageEditTxt.text).clear()
+        Objects.requireNonNull(jobTitleEditTxt.text).clear()
     }
 
     private fun addData() {
@@ -56,18 +56,18 @@ class MainActivity : AppCompatActivity() {
             goToResult()
         }
 
-    private fun inputIsEmpty(note: Note) = if (nameEditTxt!!.text.toString() != "" &&
-            ageEditTxt!!.text.toString() != "" &&
-            jobTitleEditTxt!!.text.toString() != "" &&
-            genderSpinner!!.selectedItem.toString() != "") {
-        noteDB!!.noteDao?.insert(note)
+    private fun inputIsEmpty(note: Note) = if (nameEditTxt.text.toString() != "" &&
+            ageEditTxt.text.toString() != "" &&
+            jobTitleEditTxt.text.toString() != "" &&
+            genderSpinner.selectedItem.toString() != "") {
+        noteDB.noteDao?.insert(note)
         showToastMessages(getString(R.string.add_successfuly))
     } else {
         showToastMessages(getString(R.string.please_fill_data))
     }
 
     private fun noteCreator(): Note {
-        return Note(nameEditTxt!!.text.toString(), ageEditTxt!!.text.toString(), jobTitleEditTxt!!.text.toString(), genderSpinner!!.selectedItem.toString())
+        return Note(nameEditTxt.text.toString(), ageEditTxt.text.toString(), jobTitleEditTxt.text.toString(), genderSpinner.selectedItem.toString())
     }
 
     private fun goToResult() {

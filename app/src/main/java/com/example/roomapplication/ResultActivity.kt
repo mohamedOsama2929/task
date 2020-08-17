@@ -9,8 +9,8 @@ import com.example.roomapplication.roomdb.NoteDatabase
 import com.example.roomapplication.roomdb.NoteDatabase.Companion.getInstance
 
 class ResultActivity : AppCompatActivity() {
-    var notes: List<Note>? = null
-    var noteDB: NoteDatabase? = null
+    private var notes: List<Note>? = null
+    private var noteDB: NoteDatabase? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
